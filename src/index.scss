@@ -1,0 +1,42 @@
+@use './styles/colors';
+@use './styles/fonts';
+@use './styles/grid';
+
+html {
+    @include grid.documentScale;
+}
+
+:root {
+    @include colors.generateColors;
+    @include fonts.generateFonts;
+}
+
+@include fonts.importFonts;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-color: colors.color(black) colors.color(gray-700);
+    scrollbar-width: thin;
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background-color: colors.color(black); }
+    ::-webkit-scrollbar-thumb { background-color: colors.color(gray-700); }
+}
+
+body {
+    background-color: colors.color(gray-900);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: none;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
