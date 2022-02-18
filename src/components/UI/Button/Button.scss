@@ -7,11 +7,11 @@
 .button {
     @include font-nunito-semibold;
     font-size: font(20);
+    line-height: 150%;
     border: none;
     outline: none;
     background: none;
     text-decoration: none;
-    text-transform: uppercase;
     box-shadow: none;
     border-radius: var(--button-border);
     transition: background-color .3s, border-color .3s, color .3s, transform .3s;
@@ -22,6 +22,10 @@
     align-items: center;
     svg { width: rem(24); height: rem(18); margin-right: rem(8); }
     svg path { transition: fill .3s, stroke .3s; }
+
+    @media screen and (max-width: point(md)) {
+        font-size: font(14);
+    }
 }
 
 .button-empty {
@@ -41,11 +45,14 @@
         color: color(white);
         background-color: color($name);
 
-        padding: rem(6) rem(24);
-        letter-spacing: 0.065em;
+        padding: rem(6) rem(32);
 
         &:hover { background-color: rgba($color, 80%); }
         &:active { background-color: rgba($color, 50%); }
+
+        @media screen and (max-width: point(md)) {
+            padding: rem(6) rem(24);
+        }
     }
 }
 
@@ -55,4 +62,5 @@
 
 .button.button-red {
     font-size: font(24);
+    padding: rem(16) rem(86);
 }

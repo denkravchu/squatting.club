@@ -1,11 +1,17 @@
 import './Header.scss'
 
+import { useState } from 'react'
+
 import logoImage from './assets/logo.png'
+import logoRectImage from './assets/logo-rect.png'
+
 import { ReactComponent as DiscordIcon } from './assets/discord.svg'
 import { ReactComponent as TwitterIcon } from './assets/twitter.svg'
 import { ReactComponent as OpenseaIcon } from './assets/opensea.svg'
+import { ReactComponent as MenuIcon } from './assets/menu.svg'
+import { ReactComponent as MenuCrossIcon } from './assets/menu-cross.svg'
 
-import { ButtonWhite } from '../UI/Button/Button'
+import { ButtonWhite, ButtonEmpty } from '../UI/Button/Button'
 
 
 const nav = [
@@ -31,17 +37,48 @@ const nav = [
     },
 ]
 
+const Social = () => {
+    return (
+        <div className="social">
+            <a href="#"><OpenseaIcon/></a>
+            <a href="#"><DiscordIcon/></a>
+            <a href="#"><TwitterIcon/></a>
+        </div>
+    )
+}
+
+const Nav = () => {
+    return (
+        <nav>{nav.map((el, idx) => <a key={idx} href={el.link}>{ el.body }</a>)}</nav>
+    )
+}
+
+const MobileNav = ({ isActive, setIsActive }) => {
+    return (
+        <div className={ isActive ? 'mobile-nav active' : 'mobile-nav' }>
+            <ButtonEmpty onClick={() => setIsActive(false)} className="mobile-nav__cross"><MenuCrossIcon/></ButtonEmpty>
+            <img className="logo" src={logoImage} alt="logo"/>
+            <Nav/>
+            <Social/>
+        </div>
+    )
+}
+
 const Header = () => {
+
+    const [ isActive, setIsActive ] = useState(false)
+
     return (
         <header>
-            <img src={logoImage} width={154} height={42} alt="logo" />
-            <nav>{nav.forEach(el => <a href={el.link}>{ el.body }</a>)}</nav>
-            <div className="social">
-                <OpenseaIcon/>
-                <DiscordIcon/>
-                <TwitterIcon/>
-            </div>
+            <MobileNav isActive={isActive} setIsActive={setIsActive}/>
+            <picture>
+                <source srcSet={logoImage} media="(min-width: 1081px)"/>
+                <img className="logo" src={logoRectImage} alt="logo"/>
+            </picture>
+            <Nav/>
+            <Social/>
             <ButtonWhite>Connect Wallet</ButtonWhite>
+            <ButtonEmpty onClick={() => setIsActive(true)}><MenuIcon/></ButtonEmpty>
         </header>
     )
 }

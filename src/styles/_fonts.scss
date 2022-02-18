@@ -2,7 +2,7 @@
 @use 'sass:list';
 @use 'mixins' as *;
 
-$fonts: (20, 24, 80);
+$fonts: (14, 16, 20, 24, 32, 48, 56, 80);
 
 @mixin generateFonts() {
     @each $name in $fonts {
