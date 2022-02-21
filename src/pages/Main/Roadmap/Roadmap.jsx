@@ -1,0 +1,66 @@
+import './Roadmap.scss'
+
+const roadmap = [
+    {
+        title: 'Real World Utilities',
+        body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.',
+        isDone: true
+    },
+    {
+        title: 'Real World Utilities',
+        body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.',
+        isDone: true
+    },
+    {
+        title: 'Real World Utilities',
+        body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.',
+        isDone: false
+    },
+    {
+        title: 'Real World Utilities',
+        body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.',
+        isDone: false
+    },
+    {
+        title: 'Real World Utilities',
+        body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.',
+        isDone: false
+    },
+]
+
+const Roadmap = () => {
+    return (
+        <div className="section roadmap">
+            <h2>ROADMAP</h2>
+            <div className="roadmap__scheme">
+                {roadmap.map((stage, idx) => {
+                    if ((idx + 1) % 2 === 0) {
+                        return (
+                            <div key={idx} className={stage.isDone ? "roadmap__scheme-row done" : "roadmap__scheme-row"}>
+                            <div></div>
+                            <div></div>
+                            <div>
+                                <h4 data-text={idx + 1}><span>{ stage.title }</span></h4>
+                                <p>{ stage.body }</p>
+                            </div>
+                        </div>
+                        )
+                    }
+                    return (
+                        <div key={idx} className={stage.isDone ? "roadmap__scheme-row done" : "roadmap__scheme-row"}>
+                        <div>
+                            <h4 data-text={idx + 1}><span>{ stage.title }</span></h4>
+                            <p>{ stage.body }</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    )
+                })}
+
+            </div>
+        </div>
+    )
+}
+
+export default Roadmap

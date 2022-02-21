@@ -1,0 +1,81 @@
+@use "../../../styles" as *;
+
+.team {
+    flex-direction: column;
+}
+
+.team__list {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+    gap: rem(32);
+    margin-top: rem(64); 
+    align-content: center;
+
+    @media screen and (max-width: point(md)) {
+        grid: 1fr / 1fr;
+        gap: rem(16);
+        margin-top: rem(32);
+        width: calc(100% - rem(40));
+
+    }
+}
+
+.team__list-person {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(20);
+    background-color: color(gray-800);
+    border-radius: rem(40);
+    width: rem(411);
+    box-shadow: 4px rem(8) rem(15) rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: point(md)) {
+        width: 100%;
+    }
+
+    &:nth-child(4), &:nth-child(5) {
+        margin-left: 50%;
+        @media screen and (max-width: point(md)) {
+            margin-left: 0;
+        }
+    }
+    &:nth-child(2) {
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(248);
+            height: rem(186);
+            background: url(./assets/hat.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            right: rem(-49);
+            top: rem(-93);
+        }
+
+        @media screen and (max-width: point(md)) {
+            order: -1;
+        }
+    }
+
+    img {
+        width: rem(120);
+        height: rem(120);
+        margin-right: rem(20);
+    }
+
+    h4 {
+        @include font-nunito-semibold;
+        font-size: font(32);
+        line-height: 120%;
+    }
+
+    p {
+        @include font-nunito-regular;
+        font-size: font(24);
+        line-height: 120%;
+        color: color(gray-400);
+        margin-top: rem(8);
+    }
+}

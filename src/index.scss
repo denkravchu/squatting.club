@@ -1,6 +1,8 @@
 @use './styles/colors';
 @use './styles/fonts';
 @use './styles/grid';
+@use './styles/mixins';
+
 
 html {
     @include grid.documentScale;
@@ -61,4 +63,15 @@ h2 {
 
 h3 {
     font-size: fonts.font(48);
+}
+
+.section {
+    position: relative;
+    padding: mixins.rem(180) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: grid.point(md)) {
+        padding: mixins.rem(110) 0;
+    }
 }

@@ -1,14 +1,14 @@
 @use "../../../styles" as *;
 
 .welcome {
-    position: relative;
-    padding: rem(180) 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     @media screen and (max-width: point(md)) {
-        padding: rem(110) 0;
         min-height: 100vh;
+    }
+
+    button {
+        @media screen and (max-width: point(md)) {
+            width: 100%;
+        }
     }
 }
 
@@ -19,6 +19,7 @@
 
     @media screen and (max-width: point(md)) {
         flex-direction: column-reverse;
+        margin-top: rem(-320);
     }
 }
 

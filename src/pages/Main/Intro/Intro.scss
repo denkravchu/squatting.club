@@ -1,0 +1,107 @@
+@use "../../../styles" as *;
+
+.intro {
+    flex-direction: column;
+    padding-top: 0 !important;
+
+    .wrapper {
+        padding: rem(180);
+        @media screen and (max-width: point(md)) {
+            width: 120%;
+            // width: calc(100% - rem(40));
+            padding: rem(180) calc(10% + rem(40));
+        }
+    }
+
+    p {
+        max-width: rem(854);
+        margin-top: rem(48);
+        @include font-nunito-regular;
+        font-size: font(24);
+        line-height: 170%;
+        span { display: block; }
+        span:not(:first-child) { margin-top: rem(24); }
+        @media screen and (max-width: point(md)) {
+            font-size: font(16);
+            max-width: none;
+            margin-top: rem(32);
+        }
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        margin-top: rem(48);
+        width: rem(466);
+        height: auto;
+        @media screen and (max-width: point(md)) {
+            width: rem(300);
+        }
+    }
+}
+
+.intro__first {
+    background: url(./assets/background-first.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @media screen and (max-width: point(sm)) {
+        background: url(./assets/background-first@mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.intro__second {
+    background: url(./assets/background-second.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: rem(-32);
+    @media screen and (max-width: point(md)) {
+        margin-top: rem(-100);
+    }
+    @media screen and (max-width: point(sm)) {
+        background: url(./assets/background-second@mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.intro__third {
+    background: url(./assets/background-third.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @media screen and (max-width: point(md)) {
+        margin-top: rem(-80);
+    }
+    @media screen and (max-width: point(sm)) {
+        background: url(./assets/background-third@mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    h3 { position: relative; }
+    h3::before {
+        content: '';
+        position: absolute;
+        width: rem(200);
+        height: rem(200);
+        top: 50%;
+        transform: translateY(-50%);
+        left: 70%;
+        background: url(./assets/sigarette.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media screen and (max-width: point(md)) {
+            width: rem(72);
+            height: rem(72);
+            left: 80%;
+        }
+    }
+}

@@ -20,7 +20,7 @@ const nav = [
         link: '#aboutus'
     },
     {
-        body: 'Road Map',
+        body: 'Roadmap',
         link: '#roadmap'
     },
     {
