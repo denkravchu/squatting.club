@@ -1,19 +1,34 @@
 {
   "files": {
-    "main.css": "./static/css/main.a38dcd25.css",
-    "main.js": "./static/js/main.eb3fcb0a.js",
+    "main.css": "./static/css/main.438d312d.css",
+    "main.js": "./static/js/main.72c915ba.js",
     "static/media/nft.png": "./static/media/nft.b6f52bab3658365d6dae.png",
+    "static/media/nft-common-1.png": "./static/media/nft-common-1.6c0b998037b352d41ade.png",
+    "static/media/arm-bottle.png": "./static/media/arm-bottle.560cd28d2618ecf48119.png",
+    "static/media/packet.png": "./static/media/packet.5a54d17d6e9d472a3d16.png",
+    "static/media/bottle.png": "./static/media/bottle.88740bc072da40357e24.png",
+    "static/media/user.png": "./static/media/user.4ed997166fc6d54b2e9a.png",
     "static/media/opensea.svg": "./static/media/opensea.e471764e51c1cc9a80fc515e5b9480fb.svg",
     "static/media/discord.svg": "./static/media/discord.a62d6c3dc1963e7bc31aae43c9a7e5d3.svg",
+    "static/media/stage-left.svg": "./static/media/stage-left.ca3beddfbf0988e3edde.svg",
+    "static/media/stage-right.svg": "./static/media/stage-right.e6d2eb3b46d9e8af763a.svg",
     "static/media/twitter.svg": "./static/media/twitter.5bf4b44a0e1883a9fb03143aa2e40995.svg",
+    "static/media/background-first@mobile.svg": "./static/media/background-first@mobile.906fdd52f9cd27770a2c.svg",
+    "static/media/background-third@mobile.svg": "./static/media/background-third@mobile.de7d0c2364d4bd975635.svg",
+    "static/media/background-third.svg": "./static/media/background-third.af9fb81b71705898b32b.svg",
+    "static/media/background-second.svg": "./static/media/background-second.3dff373fff116426782f.svg",
+    "static/media/background-first.svg": "./static/media/background-first.740f19f808585bfd7227.svg",
+    "static/media/background-second@mobile.svg": "./static/media/background-second@mobile.f363dec9eddfd4640e3b.svg",
     "static/media/menu.svg": "./static/media/menu.f8e41562322220122ae352e119bcf08b.svg",
     "static/media/menu-cross.svg": "./static/media/menu-cross.185b9c377c5584f94b36ae6018d790d5.svg",
     "index.html": "./index.html",
-    "main.a38dcd25.css.map": "./static/css/main.a38dcd25.css.map",
-    "main.eb3fcb0a.js.map": "./static/js/main.eb3fcb0a.js.map"
+    "static/media/clip-1.svg": "./static/media/clip-1.8e8aed6362c9b1465796.svg",
+    "static/media/line-through.svg": "./static/media/line-through.15659d1b88d70ea0c846.svg",
+    "main.438d312d.css.map": "./static/css/main.438d312d.css.map",
+    "main.72c915ba.js.map": "./static/js/main.72c915ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.a38dcd25.css",
-    "static/js/main.eb3fcb0a.js"
+    "static/css/main.438d312d.css",
+    "static/js/main.72c915ba.js"
   ]
 }
