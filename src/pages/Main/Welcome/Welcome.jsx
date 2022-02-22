@@ -3,10 +3,14 @@ import './Welcome.scss'
 import nftImage from './assets/nft.png'
 import nftBackgroundImage from './assets/background.png'
 
+import { PopupContext } from '../../../context/PopupContext'
 
 import { ButtonRed } from '../../../components/UI/Button/Button'
+import { useContext } from 'react'
 
 const Welcome = () => {
+    const [ showPopupName, setShowPopupName ] = useContext(PopupContext)
+
     return (
         <div id="welcome" className="section welcome">
             <div className="welcome__content">
@@ -16,7 +20,7 @@ const Welcome = () => {
                 <div className="welcome__text-block">
                     <h1>WELCOME TO THE<br/>SQUATTING CLUB</h1>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <ButtonRed>Mint Boujee Leopards</ButtonRed>
+                    <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint Boujee Leopards</ButtonRed>
                 </div>
             </div>
             <div className="welcome__background"></div>

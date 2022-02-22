@@ -1,0 +1,27 @@
+@use "../../../styles" as *;
+
+:root {
+    --toast-success-background: rgba(28, 158, 80, 1);
+    --toastify-toast-width: auto !important;
+}
+
+.Toastify__toast-icon {
+    width: rem(40);
+    height: rem(40);
+    min-width: rem(40);
+    min-height: rem(40);
+}
+
+.toast-message {
+    @include font-nunito-semibold;
+}
+
+.toast-subtitle {
+    @include font-nunito-regular;
+}
+
+.toast-wrapper {
+    @media screen and (max-width: point(sm)) {
+        border-radius: 0 !important;
+    }
+}

@@ -24,7 +24,7 @@
     svg path { transition: fill .3s, stroke .3s; }
 
     @media screen and (max-width: point(md)) {
-        font-size: font(14);
+        font-size: font(16);
     }
 }
 
@@ -45,13 +45,13 @@
         color: color(white);
         background-color: color($name);
 
-        padding: rem(6) rem(32);
+        padding: rem(8) rem(40);
 
         &:hover { background-color: rgba($color, 80%); }
         &:active { background-color: rgba($color, 50%); }
 
         @media screen and (max-width: point(md)) {
-            padding: rem(6) rem(24);
+            padding: rem(8) rem(32);
         }
     }
 }
