@@ -1,0 +1,25 @@
+@use "../../../styles" as *;
+
+.faq {
+    flex-direction: column;
+}
+
+.faq__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(1400);
+    margin-top: rem(64);
+    @media screen and (max-width: point(md)) {
+        margin-top: rem(32);
+        padding: 0 rem(20);
+    }
+
+    .accordion:not(:first-child) {
+        margin-top: rem(32);
+        @media screen and (max-width: point(md)) {
+            margin-top: rem(16);
+        }
+    }
+}

@@ -53,6 +53,15 @@ const Nav = () => {
     )
 }
 
+const Logo = () => {
+    return (
+        <picture>
+            <source srcSet={logoImage} media="(min-width: 1081px)"/>
+            <img className="logo" src={logoRectImage} alt="logo"/>
+        </picture>
+    )
+}
+
 const MobileNav = ({ isActive, setIsActive }) => {
     return (
         <div className={ isActive ? 'mobile-nav active' : 'mobile-nav' }>
@@ -71,10 +80,7 @@ const Header = () => {
     return (
         <header>
             <MobileNav isActive={isActive} setIsActive={setIsActive}/>
-            <picture>
-                <source srcSet={logoImage} media="(min-width: 1081px)"/>
-                <img className="logo" src={logoRectImage} alt="logo"/>
-            </picture>
+            <Logo/>
             <Nav/>
             <Social/>
             <ButtonWhite>Connect Wallet</ButtonWhite>

@@ -4,6 +4,7 @@ import Intro from "./Intro/Intro"
 import Roadmap from "./Roadmap/Roadmap"
 import Team from "./Team/Team"
 import Rarity from "./Rarity/Rarity"
+import FAQ from "./FAQ/FAQ"
 import Footer from "../../components/Footer/Footer"
 
 const Main = () => {
@@ -15,6 +16,7 @@ const Main = () => {
         <Roadmap/>
         <Team/>
         <Rarity/>
+        <FAQ/>
         <Footer/>
     </>
     )

@@ -32,7 +32,7 @@ const team = [
 
 const Team = () => {
     return (
-        <div className="section team">
+        <div id="team" className="section team">
             <h2>Our team</h2>
             <div className="team__list">
                 {

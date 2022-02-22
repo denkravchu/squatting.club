@@ -4,7 +4,7 @@ import bottleImage from './assets/bottle.png'
 
 const Intro = () => {
     return (
-        <div className="section intro">
+        <div id="aboutus" className="section intro">
             <div className="intro__first wrapper">
                 <h2>INTRODUCING THE SQUATIING</h2>
                 <p>

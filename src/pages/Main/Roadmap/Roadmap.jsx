@@ -30,7 +30,7 @@ const roadmap = [
 
 const Roadmap = () => {
     return (
-        <div className="section roadmap">
+        <div id="roadmap" className="section roadmap">
             <h2>ROADMAP</h2>
             <div className="roadmap__scheme">
                 {roadmap.map((stage, idx) => {

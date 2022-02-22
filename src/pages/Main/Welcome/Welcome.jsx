@@ -8,7 +8,7 @@ import { ButtonRed } from '../../../components/UI/Button/Button'
 
 const Welcome = () => {
     return (
-        <div className="section welcome">
+        <div id="welcome" className="section welcome">
             <div className="welcome__content">
                 <div className="welcome__image">
                     <img src={nftImage} width={526} height={715} alt="collection" />

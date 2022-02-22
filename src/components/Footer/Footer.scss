@@ -1,0 +1,17 @@
+@use '../../styles/index.scss' as *;
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(64) rem(64);
+    @media screen and (max-width: point(md)) {
+        padding: rem(64) rem(20);
+    }
+
+    p {
+        @include font-nunito-regular;
+        font-size: font(16);
+        opacity: .5;
+    }
+}
