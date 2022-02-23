@@ -38,6 +38,13 @@ header {
         }
     }
 
+    .button-red {
+        @media screen and (max-width: point(md)) {
+            font-size: font(16) !important;
+            padding: rem(12) rem(32) !important;
+        }
+    }
+
     nav {
         @include font-nunito-semibold;
         line-height: 150%;
