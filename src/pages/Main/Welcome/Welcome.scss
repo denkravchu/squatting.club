@@ -44,9 +44,10 @@
             right: auto;
             left: rem(20);
             top: rem(32);
+            transform: none !important;
         }
         @media screen and (max-width: point(sm)) {
-            transform: translateX(-50%);
+            transform: translateX(-50%) !important;
             left: 50%;
         }
     }

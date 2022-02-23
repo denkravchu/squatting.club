@@ -1,32 +1,37 @@
 import './Team.scss'
 
-import userImage from './assets/user.png'
+import alexanderImage from './assets/alexander.png'
+import christinaImage from './assets/christina.png'
+import vladislavImage from './assets/vladislav.png'
+import romanImage from './assets/roman.png'
+import denImage from './assets/den.png'
+
 
 const team = [
     {
-        image: userImage,
-        name: 'Name',
+        image: christinaImage,
+        name: 'Christina',
         body: 'Specialization'
     },
     {
-        image: userImage,
-        name: 'Name',
+        image: alexanderImage,
+        name: 'Alexander',
         body: 'Specialization'
     },
     {
-        image: userImage,
-        name: 'Name',
+        image: vladislavImage,
+        name: 'Vladislav',
         body: 'Specialization'
     },
     {
-        image: userImage,
-        name: 'Name',
-        body: 'Specialization'
+        image: romanImage,
+        name: 'Roman',
+        body: 'ui/ux designer'
     },
     {
-        image: userImage,
-        name: 'Name',
-        body: 'Specialization'
+        image: denImage,
+        name: 'Den',
+        body: 'blockchain dev'
     },
 ]
 

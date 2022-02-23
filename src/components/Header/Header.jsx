@@ -1,6 +1,6 @@
 import './Header.scss'
 
-import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import logoImage from './assets/logo.png'
 import logoRectImage from './assets/logo-rect.png'
@@ -11,8 +11,11 @@ import { ReactComponent as OpenseaIcon } from './assets/opensea.svg'
 import { ReactComponent as MenuIcon } from './assets/menu.svg'
 import { ReactComponent as MenuCrossIcon } from './assets/menu-cross.svg'
 
-import { ButtonWhite, ButtonEmpty } from '../UI/Button/Button'
+import { ButtonWhite, ButtonEmpty, ButtonRed } from '../UI/Button/Button'
 
+import renderer from '../../utils/renderer'
+
+import { PopupContext } from '../../context/PopupContext'
 
 const nav = [
     {
@@ -47,9 +50,9 @@ const Social = () => {
     )
 }
 
-const Nav = () => {
+const Nav = ({ setIsActive }) => {
     return (
-        <nav>{nav.map((el, idx) => <a key={idx} href={el.link}>{ el.body }</a>)}</nav>
+        <nav>{nav.map((el, idx) => <a key={idx} href={el.link} onClick={() => setIsActive(false)}>{ el.body }</a>)}</nav>
     )
 }
 
@@ -67,23 +70,39 @@ const MobileNav = ({ isActive, setIsActive }) => {
         <div className={ isActive ? 'mobile-nav active' : 'mobile-nav' }>
             <ButtonEmpty onClick={() => setIsActive(false)} className="mobile-nav__cross"><MenuCrossIcon/></ButtonEmpty>
             <img className="logo" src={logoImage} alt="logo"/>
-            <Nav/>
+            <Nav setIsActive={setIsActive}/>
             <Social/>
         </div>
     )
 }
 
 const Header = () => {
+    const [ showPopupName, setShowPopupName ] = useContext(PopupContext)
 
     const [ isActive, setIsActive ] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        renderer.setToRender(scrollHeader.bind(undefined, setIsScrolled), 'scrollHeader')
+        return () => renderer.removeFromRender('scrollHeader')
+    }, [])
+
+    function scrollHeader(setIsScrolled) {
+        if (window.scrollY >= 100) {
+            setIsScrolled(true)
+            return
+        }
+        setIsScrolled(false) 
+    }
 
     return (
-        <header>
+        <header className={isScrolled ? 'scrolled' : ''}>
             <MobileNav isActive={isActive} setIsActive={setIsActive}/>
             <Logo/>
-            <Nav/>
+            <Nav setIsActive={setIsActive}/>
             <Social/>
-            <ButtonWhite>Connect Wallet</ButtonWhite>
+            {/* <ButtonWhite>Connect Wallet</ButtonWhite> */}
+            <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint Boujee Leopards</ButtonRed>
             <ButtonEmpty onClick={() => setIsActive(true)}><MenuIcon/></ButtonEmpty>
         </header>
     )

@@ -1,5 +1,9 @@
 import './Roadmap.scss'
 
+import { useRenderOnMount } from '../../../hooks/useRenderOnMount'
+import { addClassOnVisible } from '../../../utils/functions'
+import { useRef } from 'react'
+
 const roadmap = [
     {
         title: 'Real World Utilities',
@@ -29,14 +33,18 @@ const roadmap = [
 ]
 
 const Roadmap = () => {
+    const roadmapRef = useRef()
+    const elementsRefs = useRef([])
+    useRenderOnMount('addClassOnVisibleRoadmap', addClassOnVisible, roadmapRef, elementsRefs.current, 'visible')
+
     return (
-        <div id="roadmap" className="section roadmap">
+        <div ref={roadmapRef} id="roadmap" className="section roadmap">
             <h2>ROADMAP</h2>
             <div className="roadmap__scheme">
                 {roadmap.map((stage, idx) => {
                     if ((idx + 1) % 2 === 0) {
                         return (
-                            <div key={idx} className={stage.isDone ? "roadmap__scheme-row done" : "roadmap__scheme-row"}>
+                            <div ref={ref => elementsRefs.current[idx] = ref} key={idx} className={stage.isDone ? "roadmap__scheme-row hidden done" : "roadmap__scheme-row hidden"}>
                             <div></div>
                             <div></div>
                             <div>
@@ -47,7 +55,7 @@ const Roadmap = () => {
                         )
                     }
                     return (
-                        <div key={idx} className={stage.isDone ? "roadmap__scheme-row done" : "roadmap__scheme-row"}>
+                        <div ref={ref => elementsRefs.current[idx] = ref} key={idx} className={stage.isDone ? "roadmap__scheme-row hidden done" : "roadmap__scheme-row hidden"}>
                         <div>
                             <h4 data-text={idx + 1}><span>{ stage.title }</span></h4>
                             <p>{ stage.body }</p>

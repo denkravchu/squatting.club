@@ -1,0 +1,52 @@
+@use "../../../styles" as *;
+
+.timer {
+    --timer-color: #FFA4A4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h4 {
+        @include font-nunito-regular;
+        color: var(--timer-color);
+        font-size: font(16);
+    }
+}
+
+.timer__time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+        @include font-into;
+        font-size: font(72);
+        line-height: 110%;
+        letter-spacing: 0.105em;
+        color: var(--timer-color);
+        margin: 0;
+    }
+
+    > div {
+        position: relative;
+        margin-right: rem(32);
+        min-width: rem(84);
+        text-align: center;
+        @media screen and (max-width: point(md)) {
+            margin-right: rem(16);
+        }
+    }
+
+    > div::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        @include font-nunito-regular;
+        font-size: font(18);
+        line-height: 110%;
+        color: color(gray-400);
+    }
+}
