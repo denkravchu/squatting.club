@@ -27,7 +27,7 @@ const Welcome = () => {
         if (timer.isRunning) {
             return <Timer/>
         }
-        return <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint Boujee Leopards</ButtonRed>
+        return <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint the Gopnik</ButtonRed>
     }
 
     return (

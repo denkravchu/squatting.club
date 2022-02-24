@@ -102,7 +102,7 @@ const Header = () => {
             <Nav setIsActive={setIsActive}/>
             <Social/>
             {/* <ButtonWhite>Connect Wallet</ButtonWhite> */}
-            <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint Boujee Leopards</ButtonRed>
+            <ButtonRed onClick={() => setShowPopupName('popup-mint')}>Mint the Gopnik</ButtonRed>
             <ButtonEmpty onClick={() => setIsActive(true)}><MenuIcon/></ButtonEmpty>
         </header>
     )

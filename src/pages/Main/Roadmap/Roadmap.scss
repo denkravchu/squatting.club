@@ -46,6 +46,10 @@ $mobile-column-padding: rem(85);
         padding-left: $mobile-column-padding;
     }
 
+    &:last-child {
+        transform: translateY(0) !important;
+    }
+
     > div {
         position: relative;
     }
@@ -115,6 +119,7 @@ $mobile-column-padding: rem(85);
         transform: rotate(15deg);
     }
 }
+
 
 .roadmap__scheme-row:nth-child(2n + 1) {
     h4::before {

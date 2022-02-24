@@ -11,27 +11,32 @@ const team = [
     {
         image: christinaImage,
         name: 'Christina',
-        body: 'Specialization'
+        body: 'Specialization',
+        description: 'Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet'
     },
     {
         image: alexanderImage,
         name: 'Alexander',
-        body: 'Specialization'
+        body: 'Specialization',
+        description: 'Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet'
     },
     {
         image: vladislavImage,
         name: 'Vladislav',
-        body: 'Specialization'
+        body: 'Specialization',
+        description: 'Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet'
     },
     {
         image: romanImage,
         name: 'Roman',
-        body: 'ui/ux designer'
+        body: 'ui/ux designer',
+        description: 'Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet'
     },
     {
         image: denImage,
         name: 'Den',
-        body: 'blockchain dev'
+        body: 'blockchain dev',
+        description: 'Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet'
     },
 ]
 
@@ -47,6 +52,9 @@ const Team = () => {
                             <div className="person__text-block">
                                 <h4>{ person.name }</h4>
                                 <p>{ person.body }</p>
+                            </div>
+                            <div className="person__description">
+                                <p>{ person.description }</p>
                             </div>
                         </div>
                     ))

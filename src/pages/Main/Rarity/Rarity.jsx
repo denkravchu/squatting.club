@@ -78,7 +78,7 @@ const Rarity = () => {
                             spaceBetween={30}
                             slidesPerView={3}
                             navigation
-                            autoplay={{delay: 1000, disableOnInteraction: false}}
+                            autoplay={{delay: 1000 + idx * 200, disableOnInteraction: false}}
                             loop={true}
                             loopPreventsSlide={true}
                         >

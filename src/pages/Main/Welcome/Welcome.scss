@@ -3,6 +3,7 @@
 .welcome {
     @media screen and (max-width: point(md)) {
         min-height: 100vh;
+        align-items: flex-start;
     }
 
     button {
@@ -19,7 +20,7 @@
 
     @media screen and (max-width: point(md)) {
         flex-direction: column-reverse;
-        margin-top: rem(-320);
+        margin-top: rem(64);
     }
 }
 
