@@ -2,8 +2,8 @@
 
 .welcome {
     @media screen and (max-width: point(md)) {
-        min-height: 100vh;
-        align-items: flex-start;
+        min-height: rem(1000);
+        align-items: flex-start !important;
     }
 
     button {
