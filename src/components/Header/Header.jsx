@@ -69,7 +69,7 @@ const MobileNav = ({ isActive, setIsActive }) => {
     return (
         <div className={ isActive ? 'mobile-nav active' : 'mobile-nav' }>
             <ButtonEmpty onClick={() => setIsActive(false)} className="mobile-nav__cross"><MenuCrossIcon/></ButtonEmpty>
-            <img className="logo" src={logoImage} alt="logo"/>
+            <a onClick={() => setIsActive(false)} href="#welcome"><img className="logo" src={logoImage} alt="logo"/></a>
             <Nav setIsActive={setIsActive}/>
             <Social/>
         </div>
@@ -98,7 +98,7 @@ const Header = () => {
     return (
         <header className={isScrolled ? 'scrolled' : ''}>
             <MobileNav isActive={isActive} setIsActive={setIsActive}/>
-            <Logo/>
+            <a href="#welcome"><Logo/></a>
             <Nav setIsActive={setIsActive}/>
             <Social/>
             {/* <ButtonWhite>Connect Wallet</ButtonWhite> */}
