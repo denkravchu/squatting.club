@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update": "git add . && git commit -m 'text-update' && git push --all && react-scripts build && postbuild.sh",
+    "update": "react-scripts build && postbuild.sh && git add . && git commit -m 'text-update' && git push --all",
     "postbuild": "postbuild.sh"
   },
   "eslintConfig": {
