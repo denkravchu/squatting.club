@@ -4,12 +4,12 @@ import Accordion from '../../../components/UI/Accordion/Accordion'
 
 const faq = [
     {
-        title: 'Lorem PUTIN dolor sit amet?',
-        body: 'Lorem HUILO dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
+        title: 'Lorem TEST121 dolor sit amet?',
+        body: 'Lorem TEST121 dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
     },
     {
-        title: 'Lorem ipsum dolor sit amet?',
-        body: 'Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
+        title: 'Lorem TEST122 dolor sit amet?',
+        body: 'Lorem TEST122 dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
     },
     {
         title: 'Lorem ipsum dolor sit amet?',
