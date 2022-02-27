@@ -8,11 +8,11 @@ const faq = [
         body: 'Lorem test2 dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
     },
     {
-        title: 'Lorem ipsum dolor sit amet?',
+        title: 'Lorem test2 dolor sit amet?',
         body: 'Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
     },
     {
-        title: 'Lorem ipsum dolor sit amet?',
+        title: 'Lorem test2 dolor sit amet?',
         body: 'Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
     },
     {
