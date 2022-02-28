@@ -5,7 +5,7 @@ import Accordion from '../../../components/UI/Accordion/Accordion'
 const faq = [
     {
         title: 'Does it work now?',
-        body: 'Lorem TEST121 dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit'
+        body: 'Yes. It works!'
     },
     {
         title: 'Lorem TEST122 dolor sit amet?',
