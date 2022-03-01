@@ -36,7 +36,7 @@ const rarity = [
         ]
     },
     {
-        title: 'Rare',
+        title: 'R-rr--r-r-r-are',
         body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         slides: [
             nftCommon1Image,
