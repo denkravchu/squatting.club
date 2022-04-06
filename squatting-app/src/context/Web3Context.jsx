@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTimer } from 'react-timer-hook';
 
-const mintDate = 'June 04, 2022 04:00:00'
+const mintDate = 'June 04, 2022 03:00:00'
 // const mintDate = 'February 23, 2022 10:56:00'
 
 
